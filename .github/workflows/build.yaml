@@ -25,7 +25,7 @@ jobs:
           buildx-version: latest
           qemu-version: latest
 
-      - name: Build and Publish
+      - name: Build Docker image
         run: |
           docker buildx build --platform linux/amd64,linux/arm/v7 . -t ghcr.io/2023-4400-exp/4439-python-app:${{ github.sha }} --push
 
