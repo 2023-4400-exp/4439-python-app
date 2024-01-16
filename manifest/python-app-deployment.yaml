@@ -15,12 +15,12 @@ spec:
         app: python-app
     spec:
       containers:
-      - image: k175/python-app
-        name: python-app
-        volumeMounts:
-        - mountPath: /var/python-app
-          name: python-app-mount
+        - image: ghcr.io/2023-4400-exp/4439-python-app:5883a5d6b196d497b53857971d3d7a69c953f562
+          name: python-app
+          volumeMounts:
+            - mountPath: /var/python-app
+              name: python-app-mount
       volumes:
-      - name: python-app-mount
-        persistentVolumeClaim:
-          claimName: python-app-data
+        - name: python-app-mount
+          persistentVolumeClaim:
+            claimName: python-app-data
